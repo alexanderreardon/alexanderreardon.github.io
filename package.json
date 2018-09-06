@@ -1,8 +1,8 @@
 {
-  "name": "alexanderreardon.github.io",
+  "name": "color-randomizer",
   "version": "0.3.0",
   "private": true,
-  "homepage": "https://alexanderreardon.github.io/",
+  "homepage": "https://alexanderreardon.github.io/color-randomizer/",
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
