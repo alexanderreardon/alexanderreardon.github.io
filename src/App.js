@@ -1,55 +1,25 @@
 import React, { Component } from 'react';
-import Button from './Button.js';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = { color: [186, 218, 85] };
-    this.handleClick = this.handleClick.bind(this);
-  };
-
-  componentDidMount() {
-    this.applyColor();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    this.applyColor();
-  }
-
-  handleClick() {
-    this.setState({ color : this.chooseColor() });
-  }
-
-  chooseColor() {
-    const random = [];
-    for (let i = 0; i < 3; i++) {
-      random.push(Math.floor(Math.random()*256));
-    }
-    return random;
-  }
-
-  formatColor(ary) {
-    return 'rgb(' + ary.join(', ') + ')';
-  }
-
-  isLight() {
-    const rgb = this.state.color;
-    return rgb.reduce((a,b) => a+b) < 127 * 3;
-  }
-
-  applyColor() {
-    const color = this.formatColor(this.state.color);
-    document.body.style.background = color;
-  }
-
   render() {
     return (
-      <div>
-        <h1 className={this.isLight() ? 'white' : 'black'}>
-          Your color is {this.formatColor(this.state.color)}.
-        </h1>
-        <Button onClick={this.handleClick} light={this.isLight()} />
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
       </div>
     );
   }
