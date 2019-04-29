@@ -1,8 +1,8 @@
 {
   "name": "alexanderreardon.github.io",
-  "homepage": "http://alexanderreardon.github.io/",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://alexanderreardon.github.io/",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,10 +11,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b build -d build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b build -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
